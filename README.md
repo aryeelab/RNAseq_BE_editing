@@ -14,6 +14,14 @@ bam-readcount-CL.sh
 # 3. Create a .vcf of potential edits based on HaplotypeCaller
 haplotypeCaller.sh
 
-# 4. Filter potential edits in the VCF file
-SOWMYA EDIT THIS
+# 4. FilterSOWMYA potential edits in the VCF file
+ step2.sh
+Usage: step2.sh
+        --vcf_control=control_vcf_file
+        --readcounts_control=control_bam_readcounts_gz
+        --vcf_treated=treated_vcf_file
+        --readcounts_treated=treated_bam_readcounts_gz
+        
+This internally calls step3.R. 
+The code was run on R version 3.5.1
 ````
