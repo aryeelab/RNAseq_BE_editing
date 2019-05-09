@@ -14,8 +14,8 @@ bam-readcount-CL.sh
 # 3. Create a .vcf of potential edits based on HaplotypeCaller
 haplotypeCaller.sh
 
-
- step2.sh
+# 4. Filter potential edits in the VCF file
+step2.sh
 Usage: step2.sh
         --vcf_control=control_vcf_file
         --readcounts_control=control_bam_readcounts_gz
