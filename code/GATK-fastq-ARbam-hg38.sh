@@ -7,17 +7,17 @@ sample=$1
 fqdir="combined"
 
 # Paths to useful files / parameters
-tempjava="/data/aryee/caleb/joung/base_editing/java-tmp"
-picardjar="/data/aryee/caleb/joung/base_editing/jars/picard.jar"
-gatkjar="/data/aryee/caleb/joung/base_editing/jars/GenomeAnalysisTK.jar"
+tempjava="/PATH/TO/java-tmp"
+picardjar="/PATH/TO/picard.jar"
+gatkjar="/PATH/TO/GenomeAnalysisTK.jar"
 threads="16"
 maxJavaMem="8000m"
 
 # Parameters for alignment and GATK variant calling -- hg38
-gtf="/data/aryee/caleb/joung/base_editing/hg38/genes.gtf"
-fasta="/data/aryee/caleb/joung/base_editing/hg38/hg38.fa"
-snpfile="/data/aryee/caleb/joung/base_editing/hg38/dbsnp_138.hg38.vcf"
-stardir="/data/aryee/caleb/joung/base_editing/hg38"
+gtf="/PATH/TO/genes.gtf"
+fasta="/PATH/TO/hg38.fa"
+snpfile="/PATH/TO/dbsnp_138.hg38.vcf"
+stardir="/PATH/TO/STAR_hg38"
 
 # Make directories if they don't exist
 mkdir -p aligned
