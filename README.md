@@ -14,14 +14,15 @@ bam-readcount-CL.sh
 # 3. Create a .vcf of potential edits based on HaplotypeCaller
 haplotypeCaller.sh
 
-# 4. Filter potential edits in the VCF file
+# 4. Match edits in the VCF file with corresponding read counts
 step2.sh
 Usage: step2.sh
         --vcf_control=control_vcf_file
         --readcounts_control=control_bam_readcounts_gz
-        --vcf_tFilterSOWMYAreated=treated_vcf_file
+        --vcf_treated=treated_vcf_file
         --readcounts_treated=treated_bam_readcounts_gz
         
-This internally calls step3.R. 
+# 5. Call step3.R with output from step4.
+Rscript step3.R VCF_TREATED.sorted.vcf_with_coverage.be_and_control.txt 
 The code was run on R version 3.5.1
 ````
