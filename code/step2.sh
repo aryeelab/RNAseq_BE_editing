@@ -63,6 +63,4 @@ LC_ALL=C join ${VCF_TREATED}.sorted ${READCOUNTS_TREATED}.sorted -1 1 -2 1 | sed
 # Join treated vcf B (that now has treated bam-readcounts)  with control bam read counts. Fill with 0 for entries where the treated vcf does not have a corresponding entry in control bam-readcounts
 LC_ALL=C join ${VCF_TREATED}.sorted.vcf_with_coverage.txt ${READCOUNTS_CONTROL}.sorted -1 1 -2 1 -a 1 | sed 's/ /\t/g' | awk '{ if (NF == 14) {print $0"\t0\t0\t0\t0\t0\t0\t0\t0\t0"} else {print $0}}' > ${VCF_TREATED}.sorted.vcf_with_coverage.be_and_control.txt 
 
-# Now we have three files for treatment B - (1) treated vcf for treatment B with treated and control read counts and (2) control vcf with control and treated(B) read counts and (3) joined read counts files
 
-Rscript step3.R ${VCF_TREATED}.sorted.vcf_with_coverage.be_and_control.txt
