@@ -26,3 +26,9 @@ Usage: step2.sh
 Rscript step3.R VCF_TREATED.sorted.vcf_with_coverage.be_and_control.txt 
 The code was run on R version 3.5.1
 ````
+
+### Exome
+
+Within `code`, there is also the `GATK_exome.sh` file, which is the workflow for genotyping and analyzing the whole-exome sequencing data associated with this work. 
+
+<br><br>
